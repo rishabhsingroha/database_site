@@ -177,3 +177,17 @@ export const leagues: League[] = [
     saveData();
     return newPlayer;
   };
+
+  export const addTrophy = (playerId: string, trophy: Omit<Trophy, 'id'>) => {
+    const player = getPlayerById(playerId);
+    if (player) {
+      const newTrophy = { ...trophy, id: Date.now().toString() };
+      player.trophies.push(newTrophy);
+      saveData();
+      return newTrophy;
+    }
+    return null;
+  };
+  
+  // Initialize data from local storage
+  loadData();
