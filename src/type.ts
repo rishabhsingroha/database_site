@@ -9,4 +9,9 @@ export interface Country {
     name: string;
     logo: string;
   }
-  
+  export interface Team {
+    id: string;
+    leagueId: string;
+    name: string;
+    logo: string;
+  }
