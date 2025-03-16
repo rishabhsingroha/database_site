@@ -15,3 +15,11 @@ export interface Country {
     name: string;
     logo: string;
   }
+  export interface Player {
+    id: string;
+    teamId: string;
+    name: string;
+    position: string;
+    image: string;
+    trophies: Trophy[];
+  }
