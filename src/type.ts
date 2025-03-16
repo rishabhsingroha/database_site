@@ -23,3 +23,9 @@ export interface Country {
     image: string;
     trophies: Trophy[];
   }
+  export interface Trophy {
+    id: string;
+    name: string;
+    year: number;
+    image: string;
+  }
