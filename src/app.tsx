@@ -27,3 +27,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+import form yourtableumysqlof mysql;
