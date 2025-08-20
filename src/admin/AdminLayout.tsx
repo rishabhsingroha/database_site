@@ -30,7 +30,7 @@ const AdminLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
               <ul className="space-y-2">
                 {navItems.map(({ path, label, icon: Icon }) => (
                   <li key={path}>
-                    //<NavLink
+                    <NavLink
                       to={path}
                       className={({ isActive }) =>
                         `flex items-center space-x-2 p-2 rounded-md transition-colors ${
@@ -39,9 +39,9 @@ const AdminLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
                             : "hover:bg-gray-100 text-gray-700"
                         }`
                       }
-                      // aria-current={({ isActive }) =>
-                      //   isActive ? "page" : undefined
-                      // }
+                      aria-current={({ isActive }: { isActive: boolean }) =>
+                        isActive ? "page" : undefined
+                      }
                     >
                       <Icon size={18} />
                       <span>{label}</span>
@@ -57,7 +57,7 @@ const AdminLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
             {children}
           </main>
         </div>
-      </div>
+          </div>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-6 mt-8">
@@ -71,5 +71,5 @@ const AdminLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
     </div>
   );
 };
-
+//big fix
 export default AdminLayout;
